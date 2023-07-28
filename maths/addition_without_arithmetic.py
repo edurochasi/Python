@@ -1,8 +1,5 @@
 """
 Illustrate how to add the integer without arithmetic operation
-Author: suraj Kumar
-Time Complexity: 1
-https://en.wikipedia.org/wiki/Bitwise_operation
 """
 
 
