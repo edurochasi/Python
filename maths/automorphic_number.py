@@ -1,14 +1,6 @@
-"""
-== Automorphic Numbers ==
-A number n is said to be a Automorphic number if
-the square of n "ends" in the same digits as n itself.
-
-Examples of Automorphic Numbers: 0, 1, 5, 6, 25, 76, 376, 625, 9376, 90625, ...
-https://en.wikipedia.org/wiki/Automorphic_number
-"""
-
-# Author : Akshay Dubey (https://github.com/itsAkshayDubey)
-# Time Complexity : O(log10n)
+import pandas
+import numpy
+import sympy
 
 
 def is_automorphic_number(number: int) -> bool:
@@ -48,8 +40,8 @@ def is_automorphic_number(number: int) -> bool:
     while number > 0:
         if number % 10 != number_square % 10:
             return False
-        number //= 10
-        number_square //= 10
+        number = np.floor_divide(number, 10)
+        number_square = np.floor_divide(number_square, 10)
     return True
 
 
