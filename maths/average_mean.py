@@ -4,7 +4,7 @@ from __future__ import annotations
 def mean(nums: list) -> float:
     """
     Find mean of a list of numbers.
-    Wiki: https://en.wikipedia.org/wiki/Mean
+    Find the middle number of the list.
 
     >>> mean([3, 6, 9, 12, 15, 18, 21])
     12.0
