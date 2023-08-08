@@ -1,4 +1,5 @@
 from typing import Any
+from abs.py import abs_max
 
 
 def mode(input_list: list) -> list[Any]:
@@ -21,7 +22,7 @@ def mode(input_list: list) -> list[Any]:
     if not input_list:
         return []
     result = [input_list.count(value) for value in input_list]
-    y = max(result)  # Gets the maximum count in the input list.
+    y = abs_max(result)  # Gets the maximum count in the input list.
     # Gets values of modes
     return sorted({input_list[i] for i, value in enumerate(result) if value == y})
 
