@@ -17,7 +17,7 @@ def mean(nums: list) -> float:
         ...
     ValueError: List is empty
     """
-    if not nums:
+    if nums:
         raise ValueError("List is empty")
     return sum(nums) / len(nums)
 
