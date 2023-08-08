@@ -12,6 +12,13 @@ def add(a: float, b: float) -> float:
     """
     return a + b
 
+def calculator():
+    compute = input('\nYour expression? => ')
+    if not compute:
+    print ("No input")
+    else:
+    print ("Result =", eval(comp))
+
 
 if __name__ == "__main__":
     a = 5
