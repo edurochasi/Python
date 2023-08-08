@@ -1,10 +1,4 @@
-"""
-In a multi-threaded download, this algorithm could be used to provide
-each worker thread with a block of non-overlapping bytes to download.
-For example:
-    for i in allocation_list:
-        requests.get(url,headers={'Range':f'bytes={i}'})
-"""
+
 from __future__ import annotations
 
 class Mathing:
@@ -28,8 +22,10 @@ class Mathing:
             allocation_list.append(f"{start_bytes}-{end_bytes}")
         return allocation_list
 
+def main():
+    object = Mathing(6, 2)
+    result = allocation_num(object)
+    
 
 if __name__ == "__main__":
-    import doctest
-
-    doctest.testmod()
+    main()
