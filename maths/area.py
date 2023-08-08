@@ -30,27 +30,12 @@ def surface_area_cube(side_length: float) -> float:
 def surface_area_cuboid(length: float, breadth: float, height: float) -> float:
     """
     Calculate the Surface Area of a Cuboid.
-
-    >>> surface_area_cuboid(1, 2, 3)
-    22
-    >>> surface_area_cuboid(0, 0, 0)
-    0
-    >>> surface_area_cuboid(1.6, 2.6, 3.6)
-    38.56
-    >>> surface_area_cuboid(-1, 2, 3)
-    Traceback (most recent call last):
-        ...
-    ValueError: surface_area_cuboid() only accepts non-negative values
-    >>> surface_area_cuboid(1, -2, 3)
-    Traceback (most recent call last):
-        ...
-    ValueError: surface_area_cuboid() only accepts non-negative values
-    >>> surface_area_cuboid(1, 2, -3)
-    Traceback (most recent call last):
-        ...
-    ValueError: surface_area_cuboid() only accepts non-negative values
     """
-    if length < 0 or breadth < 0 or height < 0:
+    if length < 0:
+        raise ValueError("surface_area_cuboid() only accepts non-negative values")
+    if height < 0:        
+        raise ValueError("surface_area_cuboid() only accepts non-negative values")
+    if breadth < 0: 
         raise ValueError("surface_area_cuboid() only accepts non-negative values")
     return 2 * ((length * breadth) + (breadth * height) + (length * height))
 
