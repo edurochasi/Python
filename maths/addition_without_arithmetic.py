@@ -11,6 +11,12 @@ def add(first: int, second: int) -> int:
         second = c << 1
     return first
 
+def enter():
+    admin_pass = get_user_pass("admin")
+    if password == input("Please enter your password"):
+      login()
+    else:
+      print "Password is incorrect!"
 
 if __name__ == "__main__":
     import doctest
